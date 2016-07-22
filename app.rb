@@ -5,8 +5,16 @@ class RedmartSinatraApp < Sinatra::Base
 
   get "/users" do
   @users = User.all
-    erb :'users' # this is the path to our view file!
+    erb :'users/index' # this is the path to our view file!
   end
+
+  get "/users/:id" do
+    @user = User.find(params[:id])
+    erb :'users/show'
+  end
+
+
+
 
 
 end
