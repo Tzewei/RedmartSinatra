@@ -1,3 +1,5 @@
 development:
   adapter: postgresql
   database: redmart
+  username: sunflower
+  password: sunflower
