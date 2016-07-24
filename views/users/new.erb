@@ -1,0 +1,43 @@
+<h2>Create New User</h2>
+
+<!--name is the key, value is the input key in by user-->
+<form action="/users" method="post">
+  <div class="form-group">
+    <label>Name:
+      <input type='text' name="user[name]">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label>Email:
+      <input type="text" name="user[email]">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label>Address:
+      <input type="text" name="user[address]">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label>Password:
+      <input type="text" name="user[password]">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label>Number:
+      <input type="text" name="user[cc_number]">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label>Date Joined:
+      <input type="text" name="user[date_joined]">
+    </label>
+  </div>
+
+
+  <input type="submit" value="submit">
+</form>

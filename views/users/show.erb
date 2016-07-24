@@ -1,7 +1,25 @@
-<h2>
-  This user is <%= @user[:name] %>
+<h1>Show User by ID</h1>
+<h2> Name:
+  <%= @user.name %>
 </h2>
+<h3> Email Address:
+  <%= @user.email %>
+</h3>
+<h3> Address:
+  <%= @user.address %>
+</h3>
+<h3> Password:
+  <%= @user.password %>
+</h3>
+<h3> Number:
+  <%= @user.cc_number %>
+</h3>
+<h3> Date Joined:
+  <%= @user.date_joined %>
+</h3>
 
-<p>
-  The ID for this user is <%= @user[:id] %>
-</p>
+<!-- delete flow  -->
+<form action="/users/<%= @user[:id] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>

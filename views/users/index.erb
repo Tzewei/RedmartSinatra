@@ -1,7 +1,43 @@
-<ul>
+<h2>Users</h2>
+
+<a class="btn" href="/users/new">Add User</a>
+
+
+<table class="showallTable">
+  <thead>
+    <tr>
+      <th>ID No</th>
+      <th>Name</th>
+      <th>Email Address</th>
+      <th>Address</th>
+      <th>password</th>
+      <th>Number</th>
+      <th>Date Joined</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td> <%= user.id %> </td>
+      <td> <%= user.name %> </td>
+      <td> <%= user.email %> </td>
+      <td> <%=user.address%> </td>
+      <td> <%=user.password%> </td>
+      <td> <%=user.cc_number%> </td>
+      <td> <%=user.date_joined%> </td>
+      <td> <a class="btn" href="/users/<%= user.id %>/edit">Edit</a></td>
+      
+
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<!-- <ul>
   <% @users.each do |user| %>
     <li>
       <%= user[:name] %>
     </li>
   <% end %>
-</ul>
+</ul> -->

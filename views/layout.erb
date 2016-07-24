@@ -3,9 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Redmart Sinatra</title>
+    <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
   </head>
   <body>
-    <h1>Display User </h1>
-    <%= yield %>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/users">RedMart</a></li>
+          <li><a href="/users">Show All Users</a></li>
+          <li><a href="/users/new">Add a User</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      &copy; Redmart
+    </footer>
+    
   </body>
 </html>
